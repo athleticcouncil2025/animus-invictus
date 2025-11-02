@@ -97,112 +97,107 @@ main {
 }
 
 .title_box {
-    background-color:  rgb(255, 255, 229);
+    background-color: rgb(31, 31, 32);
     padding: 50px;
 }
 
 .jersey_title {
     text-align: center;
     font-family: "Instrument Serif", serif;
-    font-size: 4rem;
+    font-size: 6rem;
     margin: 0;
+    color: whitesmoke;
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
 }
 
-.jerseys{
+/* Overall container */
+.jerseys {
     display: flex;
     justify-content: center;
-    background-color:  rgb(255, 255, 229);
+    align-items: flex-start;
+    flex-wrap: wrap;
+    background-color: rgb(31, 31, 32);
+    gap: 50px;
+    padding-bottom: 50px 0 100px 0; 
+    margin-bottom: 50px;
 }
 
-.viren {
-    width: 50%;
+/* Shared style for each house section */
+.house {
+    width: 30%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    flex-direction: column;  /* stack heading and cards vertically */
-    gap: 30px;               /* space between heading and cards */
-    padding: 10px 0;      /* optional top/bottom spacing */
-    margin-bottom: 50px;     
+    gap: 30px;
 }
 
+
+
+/* Title with mascot background */
 .title {
+    width: 100%;
     text-align: center;
     font-family: "Instrument Serif", serif;
     font-size: 2rem;
     margin: 0;
-    width: 100%;
-}
-
-#v {
-    background-image: url("../images/VIREN_MASCOT_2.0.PNG"); 
-    background-position: 0% 20%;
+    background-position: 0 17%;
     background-size: cover;
+    color: black;
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
 }
 
-#s {
-    background-image: url("../images/SOLEM-Mascot.png"); 
-    background-position: 0% 20%;
-    background-size: cover;
-}
-
-#l {
-    background-image: url("../images/LUXEN MASCOT 3.0.png"); 
-    background-position: 0% 22%;
-    background-size: cover; 
-}
-.viren_jersey {
-    width: 80%;
-    height: 850px;
-    border: 2px solid black;
-    background-image: url("../images/virenjersey.png");
-    background-size: cover;
-}
-
-.jerseys1 {
-    display: flex;
-    justify-content: center;
-    background-color:  rgb(255, 255, 229);
+.viren {
+    background-color: #e16a74; /* red */
 }
 
 .solen {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;  /* stack heading and cards vertically */
-    gap: 30px;               /* space between heading and cards */
-    padding: 10px 0;      /* optional top/bottom spacing */
-    margin-bottom: 50px;  
-}
-
-.solen_jersey {
-    width: 80%;
-    height: 850px;
-    border: 2px solid black;
-    background-image: url("../images/solenjersey.png");
-    background-size: cover;
-}
-
-.jerseys2{
-    display: flex;
-    justify-content: center;
-    background-color:  rgb(255, 255, 229);
+    background-color: #5478d9; /* blue */
 }
 
 .luxen {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;  /* stack heading and cards vertically */
-    gap: 30px;               /* space between heading and cards */
-    padding: 10px 0;      /* optional top/bottom spacing */
-    margin-bottom: 100px;
+    background-color: #eed678; /* yellow */
 }
 
-.luxen_jersey {
-    width: 80%;
-    height: 850px;
+
+#v {
+    background-image: url("../images/VIREN_MASCOT_2.0.png");
+}
+#s {
+    background-image: url("../images/SOLEM-Mascot.png");
+}
+#l {
+    background-image: url("../images/LUXEN MASCOT 3.0.png");
+    background-position: 0 23%;
+}
+
+/* Jerseys */
+.jersey_image {
+    width: 100%;
+    aspect-ratio: 3 / 4;
     border: 2px solid black;
-    background-image: url("../images/luxenjersey.png");
+    background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+}
+
+.viren_jersey {
+    background-image: url("../images/virenjersey.png");
+}
+.solen_jersey {
+    background-image: url("../images/solenjersey.png");
+}
+.luxen_jersey {
+    background-image: url("../images/luxenjersey.png");
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 480px) {
+    .house {
+        width: 100%;
+    }
+    .jersey_image {
+        height: 600px;
+    }
 }
 
 
