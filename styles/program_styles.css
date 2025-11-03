@@ -1,70 +1,53 @@
 
 
 .programs{
-    display: flex;
+     display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding-bottom: 50px 0 100px 0; 
+    margin-bottom: 50px;
 }
 
-.opening {
-    width: 50%;
+.opening, .bbpisay, .closing {
+    width: 30%;
     display: flex;
     align-items: center;
     flex-direction: column;  /* stack heading and cards vertically */
-    gap: 30px;               /* space between heading and cards */
+    gap: 10px;               /* space between heading and cards */
     padding: 10px 0;      /* optional top/bottom spacing */
 }
 
 .title {
     text-align: center;
     font-family: "Instrument Serif", serif;
-    font-size: 2rem;
-    margin: 0;
+    font-size: 1.7rem;
+    margin: 0%x;
+}
+
+.opening_image, .bbpisay_image, .closing_image {
+    width: 100%;
+    aspect-ratio: 996/1412;
+    border: 2px solid black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: 0;
 }
 
 .opening_image {
-    width: 80%;
-    height:900px;
-    border: 2px solid black;
     background-image: url("../images/openingprog.png");
-    background-size: cover;
 }
 
-.bbpisay {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;  /* stack heading and cards vertically */
-    gap: 30px;               /* space between heading and cards */
-    padding: 10px 0;      /* optional top/bottom spacing */
-}
 
 .bbpisay_image {
-    width: 80%;
-    height: 900px;
-    border: 2px solid black;
     background-image: url("../images/bbpisayprog.png");
-    background-size: cover;
 }
 
-.program1{
-    display: flex;
-    justify-content: center;
-}
-
-.closing {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;  /* stack heading and cards vertically */
-    gap: 30px;               /* space between heading and cards */
-    padding: 10px 0;      /* optional top/bottom spacing */
-}
 
 .closing_image {
-    width: 80%;
-    height: 900px;
-    border: 2px solid black;
     background-image: url("../images/closingprog.png");
-    background-size: cover;
 }
 
 
@@ -81,7 +64,8 @@
     }
 
     .opening, .bbpisay, .closing{
-        width: 100%;
+        width: 80%;
+        margin: auto;
     }
     
 }

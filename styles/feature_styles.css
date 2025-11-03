@@ -120,6 +120,7 @@ main {
     gap: 50px;
     padding-bottom: 50px 0 100px 0; 
     margin-bottom: 50px;
+    padding-bottom: 50px;
 }
 
 /* Shared style for each house section */
@@ -128,7 +129,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 0px;
 }
 
 
@@ -147,15 +148,15 @@ main {
 }
 
 .viren {
-    background-color: #e16a74; /* red */
+    background-color: #9d2b21; /* red */
 }
 
 .solen {
-    background-color: #5478d9; /* blue */
+    background-color: #034e8c; /* blue */
 }
 
 .luxen {
-    background-color: #eed678; /* yellow */
+    background-color: #c59b00; /* yellow */
 }
 
 
@@ -200,6 +201,24 @@ main {
     }
 }
 
+@media screen  and (max-width: 768px){
+    html, body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .jersey{
+        display: block;
+    }
+
+    .viren, .solen, .luxen{
+        width: 80%;
+        margin: auto;
+    }
+    
+}
 
 @media  screen and (max-width: 480px){
 

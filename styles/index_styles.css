@@ -24,6 +24,9 @@ body::-webkit-scrollbar{
 
 .houses{
     justify-content: center;
+    background-color: #2b2b2b;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .open {
@@ -80,7 +83,7 @@ body::-webkit-scrollbar{
 }
 
 .viren:hover  .VIREN {
-    transform: scale(0.6) translate(-980px, 0px);
+    transform: scale(0.6) translate(-940px, 0px);
     transition-duration: 0.6s;
 }
 
@@ -90,7 +93,7 @@ body::-webkit-scrollbar{
 }
 
 .solen:hover  .SOLEN {
-    transform: scale(0.6) translate(680px, 0px);
+    transform: scale(0.6) translate(630px, 0px);
     transition-duration: 0.6s;
 }
 
@@ -100,7 +103,7 @@ body::-webkit-scrollbar{
 }
 
 .luxen:hover  .LUXEN {
-    transform: scale(0.6) translate(-990px, 0px);
+    transform: scale(0.6) translate(-950px, 0px);
     transition-duration: 0.6s;
 }
 
@@ -148,6 +151,30 @@ body::-webkit-scrollbar{
     transform: translate(-50%, -50%);
     font-family: Bebas Neue, sans-serif;
     font-size: 100px;
+}
+
+.solen p, .viren p, .luxen p {
+    color: rgb(255, 253, 253);
+    font-family: 'Cardo', sans-serif;
+    margin-top: 50px;
+    margin-right: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease;
+  
+}
+
+.solen p{
+    position: absolute;
+  left: 50px;  /* distance from right edge */
+  margin-right: 255px;
+}
+
+.viren:hover p, .solen:hover p, .luxen:hover p {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .solen{
@@ -202,7 +229,7 @@ body::-webkit-scrollbar{
     transform: translateX(13%);
     width: 80%;
     height: 350px;
-    background-color: #fdde6c;
+    background-color: #d5b646;
     margin: 30px 0px;
     display: flex;
 }
@@ -238,6 +265,25 @@ body::-webkit-scrollbar{
     justify-content: center;
 }
 
+#viren {
+  color: #8c332b; /* red */
+        text-shadow: 0 0 12px rgba(255, 252, 252, 0.6);
+
+}
+
+#solen {
+  color: #002646; /* blue */
+        text-shadow: 0 0 12px rgba(255, 252, 252, 0.6);
+
+}
+
+#luxen {
+  color: #705c00; /* yellow */
+        text-shadow: 0 0 12px rgba(255, 252, 252, 0.6);
+
+}
+
+
 
 .jersey {
     display: flex;
@@ -249,12 +295,12 @@ body::-webkit-scrollbar{
     border: 4px solid black;
     margin: 50px auto 0 auto;
     gap: 15px;
-    background-image: linear-gradient(rgba(255, 215, 0, 0.3), rgba(255, 215, 0, 0.3)),
+    background-image: linear-gradient(rgba(239, 237, 222, 0.3), rgba(0, 0, 0, 0.3)),
     url('../images/jersey.png');
     background-size: cover;
     background-position: 0% 65%;
     opacity: 0.4;
-    transition: opacity 0.3s;
+    transition: opacity 0.6s;
 }
 
 
@@ -281,14 +327,15 @@ body::-webkit-scrollbar{
 }
 
 .jersey:hover{
-    background-image: url('../images/jersey.png');
+    background-image: url('../images/jersey.jpg');
     opacity:1;
+    background-position:  44%;
 }
 
 .cover{
     margin: auto;
     margin-top: 70px;
-    background: url('../images/cover.jpg') center center / cover no-repeat;
+    background: url('../images/cover.png') center center / cover no-repeat;
     background-position: center 17%;
     opacity: 1;
     background-color: black; /* optional — fills the empty space */
@@ -338,7 +385,7 @@ body::-webkit-scrollbar{
         max-width: 90vw;
     }
 
-    .houses {
+    /*.houses {
         position: relative;
         overflow-x: hidden;
         overflow-y: visible;
@@ -349,7 +396,7 @@ body::-webkit-scrollbar{
         gap: 25px;
         width: 100%;
         max-width: 1200px;
-        margin: 40px auto;     /* centers the whole .houses container */
+        margin: 40px auto; 
         box-sizing: border-box;
         padding: 0 20px;
     }
@@ -422,6 +469,23 @@ body::-webkit-scrollbar{
         opacity: 0.2;
         z-index: 0;
     }
+
+    .viren:hover .viren_logo,
+    .viren:hover .VIREN,
+    .solen:hover .solen_logo,
+    .solen:hover .SOLEN,
+    .luxen:hover .luxen_logo,
+    .luxen:hover .LUXEN {
+        transform: none;
+    }
+
+        
+    .viren:hover p,
+    .solen:hover p,
+    .luxen:hover p {
+        opacity: 0;       
+        visibility: hidden;
+    }*/
 
     .jersey {
         width: 80%;
