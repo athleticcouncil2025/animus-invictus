@@ -104,6 +104,23 @@
     background-size: cover;
 }
 
+.sheet-preview {
+    height: auto;
+    width: 80%;
+    max-width: 900px;
+    margin: 20px auto;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.sheet-preview:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
 @media screen  and (max-width: 768px){
     html, body {
         margin: 0;
