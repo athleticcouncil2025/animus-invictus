@@ -26,8 +26,6 @@ body::-webkit-scrollbar{
     width: 80%;
     height: 300px;
     border: 2px solid black;
-    background-image: url("../images/jersey.png");
-    background-size: cover;
 }
 
 .DAY_2 {
@@ -43,8 +41,9 @@ body::-webkit-scrollbar{
     width: 80%;
     height: 300px;
     border: 2px solid black;
-    background-image: url("../images/jersey.png");
+    background-image: url("../images/comingsoon.png");
     background-size: cover;
+    background-position: 50%;
 }
 
 .schedule1{
@@ -65,8 +64,9 @@ body::-webkit-scrollbar{
     width: 80%;
     height: 300px;
     border: 2px solid black;
-    background-image: url("../images/jersey.png");
+    background-image: url("../images/comingsoon.png");
     background-size: cover;
+    background-position: 50%;
 }
 
 .schedule2{
@@ -87,8 +87,9 @@ body::-webkit-scrollbar{
     width: 80%;
     height: 300px;
     border: 2px solid black;
-    background-image: url("../images/jersey.png");
+    background-image: url("../images/comingsoon.png");
     background-size: cover;
+    background-position: 50%;
 }
 
 .DAY_5 {
@@ -104,8 +105,9 @@ body::-webkit-scrollbar{
     width: 80%;
     height: 300px;
     border: 2px solid black;
-    background-image: url("../images/jersey.png");
+    background-image: url("../images/comingsoon.png");
     background-size: cover;
+    background-position: 50%;
 }
 
 .sheet-preview {
