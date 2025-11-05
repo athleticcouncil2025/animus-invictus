@@ -93,7 +93,7 @@ body::-webkit-scrollbar{
 }
 
 .solen:hover  .SOLEN {
-    transform: scale(0.6) translate(680px, 0px);
+    transform: scale(0.6) translate(630px, 0px);
     transition-duration: 0.6s;
 }
 
@@ -163,7 +163,6 @@ body::-webkit-scrollbar{
     visibility: hidden;
     transform: translateY(10px);
     transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease;
-  
 }
 
 .solen p{
@@ -344,12 +343,8 @@ body::-webkit-scrollbar{
     width: 90%;
     min-height: 400px; /* adjust as needed */
 }
-
 @media screen and (max-width: 1439px) {
-    .solen p, .viren p, .luxen p {
-         font-size: 13px;
 
-    }
     html, body {
         margin: 0;
         padding: 0;
@@ -545,8 +540,6 @@ body::-webkit-scrollbar{
     .jersey:hover{
     background-position:  44% 70%;
     }
-
-
 
     .LUXEN, .VIREN {
         margin-top: 1000px;
