@@ -2,6 +2,10 @@
     display: flex;
 }
 
+body::-webkit-scrollbar{
+    display:none;
+}
+
 .DAY_1 {
     width: 50%;
     display: flex;

@@ -4,6 +4,10 @@ html, body {
     padding: 0;
 }
 
+body::-webkit-scrollbar{
+    display:none;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -156,7 +160,7 @@ main {
 }
 
 .luxen {
-    background-color: #ddb72f; /* yellow */
+    background-color: #fddb62; /* yellow */
 }
 
 

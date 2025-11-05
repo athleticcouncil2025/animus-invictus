@@ -296,9 +296,9 @@ body::-webkit-scrollbar{
     margin: 50px auto 0 auto;
     gap: 15px;
     background-image: linear-gradient(rgba(239, 237, 222, 0.3), rgba(0, 0, 0, 0.3)),
-    url('../images/jersey.png');
+    url('../images/jersey.jpg');
     background-size: cover;
-    background-position: 0% 65%;
+    background-position: 44% 70%;
     opacity: 0.4;
     transition: opacity 0.6s;
 }
@@ -465,7 +465,7 @@ body::-webkit-scrollbar{
         height: auto;
         padding: 40px 0;
         margin: 40px auto 0 auto;
-        background-position: center;
+        background-position: 44% 70%;
     }
 
     .jersey h1 {
