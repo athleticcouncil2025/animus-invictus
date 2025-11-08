@@ -7,27 +7,31 @@
   <h2>Freedom Wall — Send your message!</h2>
   <textarea id="msg" placeholder="Type here..."></textarea><br>
   <button onclick="sendMessage()">Submit</button>
+  
 
   <script>
     function sendMessage() {
-    const message = document.getElementById('msg').value.trim();
-    if (!message) return alert("Please type a message first!");
+  const message = document.getElementById('msg').value.trim();
+  if (!message) return alert("Please type a message first!");
 
-    fetch("https://script.google.com/macros/s/AKfycbzLkULMD3RzZLT_S4Or93YTPJRfQY3HlYuLKv0c-OllUc9W30ow2jx-ScDotrcTkNho/exec?time=" + new Date().getTime(), {
-      method: "POST",
-      body: JSON.stringify({ message }),
-      headers: { "Content-Type": "application/json" }
-    })
-    .then(r => r.text())
-    .then(() => {
-      alert("✅ Message sent!");
-      document.getElementById('msg').value = "";
-    })
-    .catch(err => {
-      alert("⚠️ Failed to send message.");
-      console.error(err);
-    });
-  }
+  const formData = new URLSearchParams();
+  formData.append('message', message);
+
+  fetch("https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec", {
+    method: "POST",
+    body: formData
+  })
+  .then(r => r.text())
+  .then(() => {
+    alert("✅ Message sent!");
+    document.getElementById('msg').value = "";
+  })
+  .catch(err => {
+    alert("⚠️ Failed to send message.");
+    console.error(err);
+  });
+}
+
   </script>
 </body>
 </html>
