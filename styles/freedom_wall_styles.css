@@ -18,7 +18,7 @@ main {
     flex: 1;
 }
 
-p{
+.no{
     color: darkred;
 }
 
@@ -41,12 +41,6 @@ p{
     font-size: 30px;
 }
 
-
-/* Mobile responsiveness */
-@media screen and (max-width: 480px) {
-
-}
-
 @media screen  and (max-width: 768px){
     html, body {
         margin: 0;
@@ -54,39 +48,9 @@ p{
         overflow-x: hidden;
         -webkit-overflow-scrolling: touch;
     }
-    
-}
 
-@media  screen and (max-width: 480px){
-    main {
-        flex: none;               /* stops stretching main */
-        padding: 10px 10px;
-        flex-direction: column;   /* stack content vertically */
-        align-items: center;      /* center content */
-    }
-}
-
-/* Mobile responsiveness */
-@media screen and (max-width: 480px) {
-}
-
-@media screen  and (max-width: 768px){
-    html, body {
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
-        -webkit-overflow-scrolling: touch;
+    .fwall{
+        font-size: 15px;
     }
     
-}
-
-@media  screen and (max-width: 480px){
-
-    main {
-        flex: none;               /* stops stretching main */
-        padding: 10px 10px;
-        flex-direction: column;   /* stack content vertically */
-        align-items: center;      /* center content */
-    }
-   
 }
