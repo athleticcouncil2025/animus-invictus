@@ -154,7 +154,7 @@ body::-webkit-scrollbar{
 }
 
 .solen p, .viren p, .luxen p {
-    font-size: 14px;
+    font-size: 16px;
     color: rgb(255, 253, 253);
     font-family: 'Cardo', sans-serif;
     margin-top: 50px;
