@@ -414,7 +414,7 @@ body::-webkit-scrollbar{
 
 
     .viren::before { 
-        background-image: url('../images/VIREN_MASCOT_2.0.PNG'); 
+        background-image: url('../images/VIREN_MASCOT_2.0.png'); 
         background-position: 0% 20%;
     }
     .solen::before { 
