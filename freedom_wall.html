@@ -1,18 +1,63 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Freedom Wall 💭</title>
-</head>
+  <head>
+    <title>ATHLETIC COUNCIL</title>
+    <link rel="icon" type="image/png" href="images/ac_logo.png">
+    <link rel="stylesheet" type="text/css" href="styles/nav_styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/freedom_wall_styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/footer_styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
   <body>
-    <h2>Freedom Wall — Send your message!</h2>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/ac_logo.png" alt="AC Logo">
+                <h1>ATHLETIC COUNCIL</h1>
+            </a>
+        </div>
 
-    <form action="https://script.google.com/macros/s/AKfycbyVzH9iHYTmjm8AoxwaV9ucXgH3HD4Tn3pb57tqqmxO3ltIKdaU0NQRNZeNXDp0CRmEAQ/exec" method="POST" target="hidden_iframe">
-      <textarea name="message" placeholder="Type here..." required></textarea><br>
-      <button type="submit">Submit</button>
-    </form>
+          <div class="menu-toggle">&#9776;</div>
 
-    <!-- Hidden iframe to prevent page reload -->
-    <iframe name="hidden_iframe" style="display:none;" onload="alert('✅ Message sent!')"></iframe>
+
+        <ul class="nav_links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="feature.html" >Feature</a></li>
+            <li><a href="program.html">Program</a></li>
+            <li><a href="today_schedule.html">Today's Schedule</a></li>
+              <li><a href="freedom_wall.html" class="current">Freedom Wall</a></li>
+        </ul>
+      </nav>
+      
+    </header>
+
+    <main>
+      <div class="fwall">
+        <h2>Freedom Wall — Send your message! <br> <br> </h2>
+
+        <form action="https://script.google.com/macros/s/AKfycbyVzH9iHYTmjm8AoxwaV9ucXgH3HD4Tn3pb57tqqmxO3ltIKdaU0NQRNZeNXDp0CRmEAQ/exec" method="POST" target="hidden_iframe">
+          <textarea name="message" placeholder="Type here..." required></textarea><br>
+          <button type="submit">Submit</button>
+        </form>
+
+        <!-- Hidden iframe to prevent page reload -->
+        <iframe name="hidden_iframe" style="display:none;"></iframe>
+      </div>
+    </main>
+
+    <footer>
+      <div id="container" style="margin-top: 0;">
+          <div class="social_icons">
+              <a href="https://web.facebook.com/acpshsevc" class="facebook"></a>
+          </div>
+          <h2>ANIMUS INVICTUS: SPORTSFEST</h2>
+          <h3>ATHLETIC COUNCIL 2025</h3>
+      </div>
+    </footer>
+
 
 </body>
 </html>
