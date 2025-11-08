@@ -18,6 +18,10 @@ main {
     flex: 1;
 }
 
+p{
+    color: darkred;
+}
+
 .fwall {
     width: 80%;
     height: 400px;
