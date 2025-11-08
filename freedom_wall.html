@@ -38,10 +38,15 @@
       <div class="fwall">
         <h2>Freedom Wall — Send your message! <br> <br> </h2>
 
-        <form action="https://script.google.com/macros/s/AKfycbyVzH9iHYTmjm8AoxwaV9ucXgH3HD4Tn3pb57tqqmxO3ltIKdaU0NQRNZeNXDp0CRmEAQ/exec" method="POST" target="hidden_iframe" onsubmit="document.getElementById('confirmation').textContent='✅ Message sent!'; this.message.value=''">
+
+
+        <form id="msgForm" action="https://script.google.com/macros/s/AKfycbyVzH9iHYTmjm8AoxwaV9ucXgH3HD4Tn3pb57tqqmxO3ltIKdaU0NQRNZeNXDp0CRmEAQ/exec" method="POST" target="hidden_iframe" onsubmit="this.message.value=''">
           <textarea name="message" placeholder="Type here..." required></textarea><br>
           <button type="submit">Submit</button>
         </form>
+
+        <p id="confirmation" style="color:green; margin-top:10px;"></p>
+
 
         <!-- Hidden iframe to prevent page reload -->
         <iframe name="hidden_iframe" style="display:none;"></iframe>
@@ -60,4 +65,14 @@
 
 
 </body>
+
+<script>
+  document.getElementById('msgForm').addEventListener('submit', function() {
+  // Only logs to console when form is submitted
+  console.log('✅ Message sent!');
+  const confirmation = document.getElementById('confirmation');
+  confirmation.textContent = '✅ Message sent!';
+  setTimeout(() => confirmation.textContent = '', 3000);
+  });
+</script>
 </html>
