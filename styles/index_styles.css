@@ -328,6 +328,7 @@ body::-webkit-scrollbar{
     background-image: url('../images/jersey.jpg');
     opacity:1;
     background-position:  44%;
+    transition: opacity 0.6s;
 }
 
 .cover{
