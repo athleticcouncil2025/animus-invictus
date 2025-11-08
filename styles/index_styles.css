@@ -127,7 +127,7 @@ body::-webkit-scrollbar{
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url('../images/VIREN_MASCOT_2.0.PNG');
+  background-image: url('../images/VIREN_MASCOT_2.0.png');
   background-size: cover;
   background-position: 0% 20%;
   opacity: 0.35; 

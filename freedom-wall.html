@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Freedom Wall 💭</title>
+</head>
+<body>
+  <h2>Freedom Wall — Send your message!</h2>
+  <textarea id="msg" placeholder="Type here..."></textarea><br>
+  <button onclick="sendMessage()">Submit</button>
+
+  <script>
+    function sendMessage() {
+    const message = document.getElementById('msg').value.trim();
+    if (!message) return alert("Please type a message first!");
+
+    fetch("https://script.google.com/macros/s/AKfycbzLkULMD3RzZLT_S4Or93YTPJRfQY3HlYuLKv0c-OllUc9W30ow2jx-ScDotrcTkNho/exec", {
+      method: "POST",
+      body: JSON.stringify({ message }),
+      headers: { "Content-Type": "application/json" }
+    })
+    .then(r => r.text())
+    .then(() => {
+      alert("✅ Message sent!");
+      document.getElementById('msg').value = "";
+    })
+    .catch(err => {
+      alert("⚠️ Failed to send message.");
+      console.error(err);
+    });
+  }
+  </script>
+</body>
+</html>
+
+       
