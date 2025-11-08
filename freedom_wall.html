@@ -12,33 +12,7 @@
     </form>
 
     <!-- Hidden iframe to prevent page reload -->
-    <iframe name="hidden_iframe" style="display:none;"></iframe>
+    <iframe name="hidden_iframe" style="display:none;" onload="alert('✅ Message sent!')"></iframe>
 
-  </body>
-
-  <script>
-    function sendMessage() {
-      const message = document.getElementById('msg').value.trim();
-      if (!message) return alert("Please type a message first!");
-
-      // Send as form data to avoid CORS issues
-      const formData = new URLSearchParams();
-      formData.append('message', message);
-
-      fetch("https://script.google.com/macros/s/AKfycbzLkULMD3RzZLT_S4Or93YTPJRfQY3HlYuLKv0c-OllUc9W30ow2jx-ScDotrcTkNho/exec", {  // Replace with your Apps Script URL
-        method: "POST",
-        body: formData
-      })
-      .then(r => r.text())
-      .then(() => {
-        alert("✅ Message sent!");
-        document.getElementById('msg').value = "";
-      })
-      .catch(err => {
-        alert("⚠️ Failed to send message.");
-        console.error(err);
-      });
-    }
-  </script>
 </body>
 </html>
