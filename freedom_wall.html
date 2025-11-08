@@ -1,39 +1,44 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html>
 <head>
   <title>Freedom Wall 💭</title>
 </head>
-<body>
-  <h2>Freedom Wall — Send your message!</h2>
-  <textarea id="msg" placeholder="Type here..."></textarea><br>
-  <button onclick="sendMessage()">Submit</button>
-  
+  <body>
+    <h2>Freedom Wall — Send your message!</h2>
+
+    <form action="https://script.google.com/macros/s/AKfycbzLkULMD3RzZLT_S4Or93YTPJRfQY3HlYuLKv0c-OllUc9W30ow2jx-ScDotrcTkNho/exec" method="POST" target="hidden_iframe">
+      <textarea name="message" placeholder="Type here..." required></textarea><br>
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- Hidden iframe to prevent page reload -->
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
+
+  </body>
 
   <script>
     function sendMessage() {
-  const message = document.getElementById('msg').value.trim();
-  if (!message) return alert("Please type a message first!");
+      const message = document.getElementById('msg').value.trim();
+      if (!message) return alert("Please type a message first!");
 
-  const formData = new URLSearchParams();
-  formData.append('message', message);
+      // Send as form data to avoid CORS issues
+      const formData = new URLSearchParams();
+      formData.append('message', message);
 
-  fetch("https://script.google.com/macros/s/AKfycbzLkULMD3RzZLT_S4Or93YTPJRfQY3HlYuLKv0c-OllUc9W30ow2jx-ScDotrcTkNho/exec", {
-    method: "POST",
-    body: formData
-  })
-  .then(r => r.text())
-  .then(() => {
-    alert("✅ Message sent!");
-    document.getElementById('msg').value = "";
-  })
-  .catch(err => {
-    alert("⚠️ Failed to send message.");
-    console.error(err);
-  });
-}
-
+      fetch("https://script.google.com/macros/s/AKfycbzLkULMD3RzZLT_S4Or93YTPJRfQY3HlYuLKv0c-OllUc9W30ow2jx-ScDotrcTkNho/exec", {  // Replace with your Apps Script URL
+        method: "POST",
+        body: formData
+      })
+      .then(r => r.text())
+      .then(() => {
+        alert("✅ Message sent!");
+        document.getElementById('msg').value = "";
+      })
+      .catch(err => {
+        alert("⚠️ Failed to send message.");
+        console.error(err);
+      });
+    }
   </script>
 </body>
 </html>
-
-       
