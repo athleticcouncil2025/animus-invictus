@@ -40,7 +40,7 @@
 
 
 
-        <form id="msgForm" action="https://script.google.com/macros/s/AKfycbyVzH9iHYTmjm8AoxwaV9ucXgH3HD4Tn3pb57tqqmxO3ltIKdaU0NQRNZeNXDp0CRmEAQ/exec" method="POST" target="hidden_iframe" onsubmit="this.message.value=''">
+        <form id="msgForm" action="https://script.google.com/macros/s/AKfycbyVzH9iHYTmjm8AoxwaV9ucXgH3HD4Tn3pb57tqqmxO3ltIKdaU0NQRNZeNXDp0CRmEAQ/exec" method="POST" target="hidden_iframe">
           <textarea name="message" placeholder="Type here..." required></textarea><br>
           <button type="submit">Submit</button>
         </form>
@@ -72,7 +72,10 @@
   console.log('✅ Message sent!');
   const confirmation = document.getElementById('confirmation');
   confirmation.textContent = '✅ Message sent!';
-  setTimeout(() => confirmation.textContent = '', 3000);
+  setTimeout(() => {
+    this.message.value=''
+    confirmation.textContent = ''
+  }, 3000);
   });
 </script>
 </html>
