@@ -38,7 +38,7 @@
       <div class="fwall">
         <h2>Freedom Wall — Send your message! <br> <br> </h2>
 
-        <form action="https://script.google.com/macros/s/AKfycbyVzH9iHYTmjm8AoxwaV9ucXgH3HD4Tn3pb57tqqmxO3ltIKdaU0NQRNZeNXDp0CRmEAQ/exec" method="POST" target="hidden_iframe">
+        <form action="https://script.google.com/macros/s/AKfycbyVzH9iHYTmjm8AoxwaV9ucXgH3HD4Tn3pb57tqqmxO3ltIKdaU0NQRNZeNXDp0CRmEAQ/exec" method="POST" target="hidden_iframe" onsubmit="document.getElementById('confirmation').textContent='✅ Message sent!'; this.message.value=''">
           <textarea name="message" placeholder="Type here..." required></textarea><br>
           <button type="submit">Submit</button>
         </form>
