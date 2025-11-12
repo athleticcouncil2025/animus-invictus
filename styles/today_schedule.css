@@ -22,51 +22,63 @@ body::-webkit-scrollbar{
     align-items: center;     /* center each day horizontally */
     gap: 40px;               /* space between days */
     margin: 40px auto;
+    justify-content: center;
 }
-
 
 .DAY_1, .DAY_2, .DAY_3, .DAY_4 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* centers inner content */
+    width: 100%;          /* full width for each day container */
 }
-
 
 .day1, .day2, .day3, .day4 {
-  width: 80%;
-  height: 550px;
+    width: 95%;            /* inner content width */
+    max-width: 1000px;     /* optional, prevents stretching too much */
+    margin: 0 auto;        /* centers the box inside the container */
+    height: 550px;
 }
 
-
-.day3, .day4{
+.day3, .day4 {
     background-image: url(../images/comingsoon.png);
     background-size: cover;
     background-position: 50% 30%;
 }
 
-@media screen and (max-width: 768px) {
-  .schedule, .schedule1, .schedule2 {
-    display: block;
-  }
-
   .DAY_1, .DAY_2, .DAY_3, .DAY_4 {
     width: 100%;
   }
-}
-
 
 .sheet-preview {
     height: auto;
-    width: 90%;
-    max-width: 900px;
-    margin: 20px auto;
+    width: 95%;
+    max-width: 1000px;
     border: 2px solid #ccc;
     border-radius: 12px;
     overflow: hidden;
     cursor: pointer;
     transition: 0.25s ease;
 }
+
+.open-sheet {
+    display: block;
+    margin: 10px auto 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #222;
+    color: white;
+    cursor: pointer;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.2rem;
+    transition: 0.2s;
+}
+
+.open-sheet:hover {
+    background-color: #444;
+    transform: scale(1.05);
+}
+
 
 .sheet-preview:hover {
     transform: scale(1.02);
