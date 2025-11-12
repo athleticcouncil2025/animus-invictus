@@ -6,14 +6,7 @@ body::-webkit-scrollbar{
     display:none;
 }
 
-.DAY_1 {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;  /* stack heading and cards vertically */
-    gap: 30px;               /* space between heading and cards */
-    padding: 10px 0;      /* optional top/bottom spacing */
-}
+
 
 .title {
     text-align: center;
@@ -22,97 +15,50 @@ body::-webkit-scrollbar{
     margin: 0;
 }
 
-.day1 {
-    width: 80%;
-    height: 550px;
-    border: 2px solid black;
-}
-
-.DAY_2 {
-    width: 50%;
+.schedule {
+    width: 100%;
     display: flex;
-    align-items: center;
-    flex-direction: column;  /* stack heading and cards vertically */
-    gap: 30px;               /* space between heading and cards */
-    padding: 10px 0;      /* optional top/bottom spacing */
+    flex-direction: column;  /* stack vertically */
+    align-items: center;     /* center each day horizontally */
+    gap: 40px;               /* space between days */
+    margin: 40px auto;
 }
 
-.day2 {
-    width: 80%;
-    height: 300px;
-    border: 2px solid black;
-    background-image: url("../images/comingsoon.png");
+
+.DAY_1, .DAY_2, .DAY_3, .DAY_4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+}
+
+
+.day1, .day2, .day3, .day4 {
+  width: 80%;
+  height: 550px;
+}
+
+
+.day3, .day4{
+    background-image: url(../images/comingsoon.png);
     background-size: cover;
-    background-position: 50%;
+    background-position: 50% 30%;
 }
 
-.schedule1{
-    display: flex;
-    justify-content: center;
+@media screen and (max-width: 768px) {
+  .schedule, .schedule1, .schedule2 {
+    display: block;
+  }
+
+  .DAY_1, .DAY_2, .DAY_3, .DAY_4 {
+    width: 100%;
+  }
 }
 
-.DAY_3 {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;  /* stack heading and cards vertically */
-    gap: 30px;               /* space between heading and cards */
-    padding: 10px 0;      /* optional top/bottom spacing */
-}
-
-.day3 {
-    width: 80%;
-    height: 300px;
-    border: 2px solid black;
-    background-image: url("../images/comingsoon.png");
-    background-size: cover;
-    background-position: 50%;
-}
-
-.schedule2{
-    display: flex;
-    justify-content: center;
-}
-
-.DAY_4 {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;  /* stack heading and cards vertically */
-    gap: 30px;               /* space between heading and cards */
-    padding: 10px 0;      /* optional top/bottom spacing */
-}
-
-.day4 {
-    width: 80%;
-    height: 300px;
-    border: 2px solid black;
-    background-image: url("../images/comingsoon.png");
-    background-size: cover;
-    background-position: 50%;
-}
-
-.DAY_5 {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;  /* stack heading and cards vertically */
-    gap: 30px;               /* space between heading and cards */
-    padding: 10px 0;      /* optional top/bottom spacing */
-}
-
-.day5 {
-    width: 80%;
-    height: 300px;
-    border: 2px solid black;
-    background-image: url("../images/comingsoon.png");
-    background-size: cover;
-    background-position: 50%;
-}
 
 .sheet-preview {
     height: auto;
-    width: 80%;
+    width: 90%;
     max-width: 900px;
     margin: 20px auto;
     border: 2px solid #ccc;
