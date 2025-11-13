@@ -20,7 +20,6 @@ body::-webkit-scrollbar{
     display: flex;
     flex-direction: column;  /* stack vertically */
     align-items: center;     /* center each day horizontally */
-    gap: 40px;               /* space between days */
     margin: 40px auto;
     justify-content: center;
 }
@@ -36,18 +35,14 @@ body::-webkit-scrollbar{
     width: 95%;            /* inner content width */
     max-width: 1000px;     /* optional, prevents stretching too much */
     margin: 0 auto;        /* centers the box inside the container */
-    height: 550px;
+    height: 300px;
 }
 
-.day3, .day4{
-    height: 200px;
-}
-
-
-.day3, .day4 {
+.day4{
+    height: 400px;
     background-image: url(../images/comingsoon.png);
     background-size: cover;
-    background-position: 50% 30%;
+    background-position: 50% 40%;
 }
 .sheet-preview {
     height: auto;
