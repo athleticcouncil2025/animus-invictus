@@ -38,12 +38,6 @@ body::-webkit-scrollbar{
     height: 300px;
 }
 
-.day4{
-    height: 400px;
-    background-image: url(../images/comingsoon.png);
-    background-size: cover;
-    background-position: 50% 40%;
-}
 .sheet-preview {
     height: auto;
     width: 100%;
